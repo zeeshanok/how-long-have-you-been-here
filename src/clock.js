@@ -78,6 +78,9 @@ class Clock extends React.Component {
                 }
             }
         }
+        if (days >= 10 && minutes >= 10) {
+            window.location.reload();
+        }
         //Le message end
         return (
             <div className="clock">
