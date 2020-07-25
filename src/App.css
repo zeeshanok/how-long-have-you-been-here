@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -9,7 +9,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 50s linear;
   }
 }
 
@@ -35,4 +35,20 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+body {
+  background-color: black;
+  color: white;
+}
+div.clock {
+  text-align: center;
+  font-weight: 900;
+  font-size: 4rem;
+  color: rgb(195, 0, 255);
+}
+div.clock span.head {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
 }
