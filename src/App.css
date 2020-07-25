@@ -42,9 +42,11 @@ body {
   color: white;
 }
 div.clock {
+  display: flexbox;
+  justify-content: center;
   text-align: center;
   font-weight: 900;
-  font-size: 4rem;
+  font-size: 5rem;
   color: rgb(195, 0, 255);
 }
 div.clock span.head {

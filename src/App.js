@@ -5,7 +5,7 @@ import Clock from './clock';
 function App() {
   return (
     <div className="App">
-      <Clock/>
+      <Clock onEnterViewport={()=>console.log('enter')}/>
     </div>
   );
 }
