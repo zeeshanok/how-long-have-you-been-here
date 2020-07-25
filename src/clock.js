@@ -1,5 +1,4 @@
 import React from 'react';
-import handleViewport from 'react-in-viewport';
 class Clock extends React.Component {
     constructor(props) {
         super(props);
@@ -93,4 +92,4 @@ class Clock extends React.Component {
     }
 }
 
-export default handleViewport(Clock);
+export default Clock;
