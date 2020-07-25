@@ -45,7 +45,7 @@ class Clock extends React.Component {
         // Le message
         let message = (<span>Congratulations!</span>);
         if (minutes >= 1) message = (<span>Its been over a  minute. Do you not have anything else to do?</span>);
-        if (minutes === 5) message = (<span>Still got nothing to do?</span>);
+        if (minutes >= 5) message = (<span>Still got nothing to do?</span>);
         if (minutes >= 10) message = (<span>So... how's life?</span>);
         if (minutes >= 20) message = (<span>Why are you even here?</span>);
         if (minutes >= 30) message = (<span>Ok this is getting ridiculous...</span>);
