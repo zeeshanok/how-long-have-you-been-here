@@ -53,4 +53,5 @@ div.clock span.head {
   color: white;
   font-size: 2rem;
   font-weight: 500;
+  word-wrap: break-word;
 }
