@@ -35,9 +35,9 @@ class Clock extends React.Component {
         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        const daysDisplay = days > 0 ? (<div><span>{days} day{this.checkPlural("s",days)}</span><br /></div>) : null
-        const hoursDisplay = hours > 0 ? (<div><span>{hours} hour{this.checkPlural("s",hours)}</span><br /></div>) : null
-        const minutesDisplay = minutes > 0 ? (<div><span>{minutes} minute{this.checkPlural("s",minutes)}</span><br /></div>) : null
+        const daysDisplay = days > 0 ? (<div><span>{days} day{this.checkPlural("s",days)},</span><br /></div>) : null
+        const hoursDisplay = hours > 0 ? (<div><span>{hours} hour{this.checkPlural("s",hours)},</span><br /></div>) : null
+    const minutesDisplay = minutes > 0 ? (<div><span>{minutes} minute{this.checkPlural("s",minutes)} and</span><br /></div>) : null
         const secondsDisplay = (<div><span>{seconds} second{this.checkPlural("s",seconds)}</span></div>)
 
         return (
