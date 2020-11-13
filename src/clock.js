@@ -7,14 +7,19 @@ class Clock extends React.Component {
             time: new Date()
         };
         this.tick = this.tick.bind(this);
+        this.focusTick = this.focusTick.bind(this);
+    }
+    focusTick() {
+        if (!document.hasFocus()) this.setState({ startTime: new Date() });
     }
     tick() {
         this.setState(
             { time: new Date() }
-        )
+        );
     }
     componentDidMount() {
-        setInterval(this.tick, 1000)
+        setInterval(this.focusTick, 1100);
+        setInterval(this.tick, 1000);
     }
     checkPlural(text, num) {
         if (num === 0) {
@@ -35,6 +40,7 @@ class Clock extends React.Component {
         let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        if (seconds < 0) seconds = 0;
 
         const daysDisplay = days > 0 ? (<div><span>{days} day{this.checkPlural("s", days)},</span><br /></div>) : null
         const hoursDisplay = hours > 0 ? (<div><span>{hours} hour{this.checkPlural("s", hours)},</span><br /></div>) : null
